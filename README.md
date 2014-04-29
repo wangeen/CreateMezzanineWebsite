@@ -11,7 +11,12 @@ https://github.com/twbs/bootstrap
 
 Possible Issues while install.
 
-1. **no such table: pages_page?**  
+- **no such table: pages_page?**  
     ./manage.py syncdb  
     ./manage.py migrate
-  
+
+- **sharing host commit**  
+      #!/usr/bin/env python  
+      import subprocess  
+      subprocess.call("git push", shell=True)  
+      subprocess.call('''ssh name@name.com "cd name.com; pwd; git checkout HEAD .; pkill python"''', shell=True)  
